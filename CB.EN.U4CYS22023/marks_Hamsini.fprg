@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:06:58 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTAtMjg7MDk6MTA6NDIgQU07Mjg0OA=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTAtMjg7MTA6MDY6NTggQU07MzsyOTYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rollno, sem" type="Integer" array="False" size=""/>
+            <declare name="Name, address, bloodgrp, dept, phoneno, subjectcode1, subjectcode2, subjectcode3" type="String" array="False" size=""/>
+            <declare name="mark1, mark2, mark3, total, avg" type="Real" array="False" size=""/>
+            <input variable="rollno"/>
+            <input variable="address"/>
+            <input variable="bloodgrp"/>
+            <input variable="dept"/>
+            <input variable="name"/>
+            <input variable="phoneno"/>
+            <input variable="sem"/>
+            <input variable="mark1"/>
+            <input variable="mark2"/>
+            <input variable="mark3"/>
+            <input variable="subjectcode1"/>
+            <input variable="subjectcode2"/>
+            <input variable="subjectcode3"/>
+            <assign variable="total" expression="mark1+mark2+mark3"/>
+            <assign variable="avg" expression="total/3"/>
+            <output expression="&quot;Roll no:&quot;&amp;rollno&amp;&quot;    &quot;&amp;&quot;sem:&quot;&amp;sem&amp;&quot;    &quot;&amp;&quot;total:&quot;&amp;total&amp;&quot;    &quot;&amp;&quot;Average:&quot;&amp;avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

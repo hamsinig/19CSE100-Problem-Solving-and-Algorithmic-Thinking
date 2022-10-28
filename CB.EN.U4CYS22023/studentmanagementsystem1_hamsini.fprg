@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:27:07 PM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTAtMjg7MTA6MjQ6MjIgUE07Mjg1OA=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTAtMjg7MTA6Mjc6MDcgUE07MTsyOTcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rollno, phoneno" type="Integer" array="False" size=""/>
+            <declare name="name, address, bloodgrp" type="String" array="False" size=""/>
+            <input variable="rollno"/>
+            <input variable="phone"/>
+            <input variable="name"/>
+            <input variable="address"/>
+            <input variable="bloodgrp"/>
+            <output expression="&quot;rollno:&quot;&amp;rollno&amp;&quot;   &quot;&amp;&quot;name:&quot;&amp;name&amp;&quot;    &quot;&amp;&quot;phonenumber:&quot;&amp;phoneno&amp;&quot;  &quot;&amp;&quot;bloodgroup:&quot;&amp;bloodgroup&amp;&quot;   &quot;&amp;&quot;address:&quot;&amp;address" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
