@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 09:31:17 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTEtMDQ7MDk6MjY6MjkgQU07Mjg1NQ=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTEtMDQ7MDk6MzE6MTcgQU07MjsyOTU3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="celsius, fahrenheit" type="Real" array="False" size=""/>
+            <input variable="fahrenheit"/>
+            <comment text="taking input in Fahrenheit from the user"/>
+            <assign variable="celsius" expression="((fahrenheit-32)*5)/9"/>
+            <comment text="Converting Celsius to fahrenheit using the formula"/>
+            <output expression="&quot;Celsius:&quot;&amp;celsius" newline="True"/>
+            <comment text="printing the calculated value of celsius"/>
+        </body>
+    </function>
+</flowgorithm>

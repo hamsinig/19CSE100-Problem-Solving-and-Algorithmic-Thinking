@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:19:40 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTEtMDQ7MDk6NTM6MDAgQU07Mjg0NA=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTEtMDQ7MTA6MTk6NDAgQU07NDsyOTUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program swaps the values of a and b without using a thrid variable"/>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <assign variable="a" expression="a+b"/>
+            <comment text="a stores the sum of a and b"/>
+            <assign variable="b" expression="a-b"/>
+            <comment text="subtracting the previous of b from the sum, to get the previous value of a"/>
+            <assign variable="a" expression="a-b"/>
+            <comment text="subtracting the new value of b from the sum, to get the previous value of b"/>
+            <output expression="&quot;value of a after swapping  &quot;&amp;a&amp;&quot;    &quot;&amp;&quot;value of b after swapping &quot;&amp;b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:24:14 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTEtMDQ7MTA6MDY6MTYgQU07Mjg0MQ=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTEtMDQ7MTA6MjQ6MTQgQU07MjsyOTQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculating the value of the remainder without using modulus function"/>
+            <declare name="divisor, dividend, quotient, remainder" type="Integer" array="False" size=""/>
+            <input variable="dividend"/>
+            <input variable="divisor"/>
+            <assign variable="quotient" expression="dividend/divisor"/>
+            <assign variable="remainder" expression="dividend-(divisor*quotient)"/>
+            <output expression="&quot;Remainder is   &quot;&amp;remainder" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:11:18 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTEtMDQ7MDk6MzE6MzYgQU07Mjg0OQ=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTEtMDQ7MTA6MTE6MTggQU07NDsyOTUw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, root1, root2" type="Real" array="False" size=""/>
+            <comment text="taking input of a,b,c to calculate the roots of the quadractic equation which is of the form ax^2+bx+c, ignoring imaginary roots."/>
+            <input variable="a"/>
+            <comment text="enter the coefficient of x^2"/>
+            <input variable="b"/>
+            <comment text="enter the coefficient of x"/>
+            <input variable="c"/>
+            <comment text="enter the value of the constant&#13;&#10;&#13;&#10;"/>
+            <assign variable="root1" expression="(-b+sqrt(b^2-4*a*c))/2*a"/>
+            <comment text="Each Quadratic equation has two roots,hence, storing both values in root1 and root2 variables after calculating using the formula"/>
+            <assign variable="root2" expression="(-b-sqrt(b^2-4*a*c))/2*a"/>
+            <output expression="&quot;Root1:  &quot;&amp;root1&amp;&quot;    &quot;&amp;&quot;Root2:&quot;&amp;&quot;    &quot;&amp;root2" newline="True"/>
+            <comment text="printing root1 and root2"/>
+        </body>
+    </function>
+</flowgorithm>
