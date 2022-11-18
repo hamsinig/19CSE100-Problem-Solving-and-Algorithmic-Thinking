@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22023"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:11:46 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAyMzsyMDIyMjNNQVlDMDA2MDsyMDIyLTExLTE4OzA5OjA0OjIxIEFNOzMwNTQ="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAyMzsyMDIyMjNNQVlDMDA2MDsyMDIyLTExLTE4OzEwOjExOjQ2IEFNOzQ7MzE2Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program gets your name, account number, amount of money in the account and pin. It checks if the balnce in the account is greater than 500. It then checks if account number and pin match. If it does, it lets the user withdraw the account. The balance in the acct is also calculated and checks if it satisfies the minimum balance criteria of Rs.500."/>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="acctno1, pin1, balance1, withdraw, pin2, acctno2, balanceamt" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter your name&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Account creation, please enter your account number&quot;" newline="True"/>
+            <input variable="acctno1"/>
+            <output expression="&quot;Enter the pin you want to create&quot;" newline="True"/>
+            <input variable="pin1"/>
+            <output expression="&quot;Please enter the balance money in your account&quot;" newline="True"/>
+            <input variable="balance1"/>
+            <comment text="Checks if the amount of money in the account is greater than 500"/>
+            <if expression="balance1&gt;500">
+                <then>
+                    <output expression="&quot;Please enter how much you'd like to withdraw&quot;" newline="True"/>
+                    <input variable="withdraw"/>
+                    <comment text="checks if the amount of money in the account is greater than the amount of money that wants to be withdrawn"/>
+                    <if expression="withdraw&lt;balance1">
+                        <then>
+                            <output expression="&quot;You have enough balance, Please enter your account number&quot;" newline="True"/>
+                            <input variable="acctno2"/>
+                            <if expression="acctno1=acctno2">
+                                <then>
+                                    <comment text="checks if the acct number given initially is equal to the acct number entered"/>
+                                    <output expression="&quot;please enter your pin number&quot;" newline="True"/>
+                                    <input variable="pin2"/>
+                                    <comment text="Checks if the pin numbers match"/>
+                                    <if expression="pin1=pin2">
+                                        <then>
+                                            <output expression="&quot;you can withdraw the amount&quot;" newline="True"/>
+                                            <comment text="calculates the balance amt in the cct, after withdrawl"/>
+                                            <assign variable="balanceamt" expression="balance1-withdraw"/>
+                                            <comment text="checks if the balance amt in the account after withdrawl is greater tham 500"/>
+                                            <if expression="balanceamt&gt;500">
+                                                <then>
+                                                    <output expression="&quot;The cash remaining in your account is&quot; &amp;balanceamt&amp;&quot;You have enough minimum balance.It is more than Rs.500&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;The cash remaining in your account is&quot; &amp;balanceamt&amp;&quot;You dont have enough balance in your account. Please put money in your account to avoid penalty charges&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;sorry, the pin was incorrect,you cant withdaw the amount&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;sorry, your account number doesnt match&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;sorry, you're withdraawing more than the balance you have in your account&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Sorry, your balance is lesser than 500&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
