@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:06:57 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTItMDk7MTA6MzU6NDAgQU07Mjg0Ng=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTItMDk7MTE6MDY6NTcgQU07NDsyOTY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="elementsearch, frequency, input2, input1, input3" type="Integer" array="False" size=""/>
+            <comment text="frequency calculates the frequency of the occurance of a particular element. input is an array that takes the input of all 10 elements of the array to be stored. input2 takes the input from the user with respect to the number whose frequency is to be searched. If frequency=0, an error message is displayed. input1 and input3 help in iteration from 0 to 9, they help in taking the value of each element of the array and checking the frequency, respectively."/>
+            <declare name="input" type="Integer" array="True" size="10"/>
+            <for variable="input1" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Give the input for the &quot;&amp;input1+1&amp;&quot; element&quot;" newline="True"/>
+                <input variable="input[input1]"/>
+            </for>
+            <output expression="&quot;Enter the number whose frequency you want to check&quot;" newline="True"/>
+            <input variable="input2"/>
+            <assign variable="frequency" expression="0"/>
+            <for variable="input3" start="0" end="9" direction="inc" step="1">
+                <if expression="input2=input[input3]">
+                    <then>
+                        <assign variable="frequency" expression="frequency+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="frequency=0">
+                <then>
+                    <output expression="&quot;This number doesn't exist in the array. Hence, the frequency is 0&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The frequency of &quot;&amp;input2&amp;&quot; number is &quot;&amp;frequency" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:09:20 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTItMDk7MTA6Mjc6MTAgQU07Mjg0NA=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTItMDk7MTE6MDk6MjAgQU07MzsyOTU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="largestElement is an array which stores all the values for the inputs given by the user. largestnum is a variable whichs stores the value of the largest number of the array. It is initially assigned the value of 0. This program checks if the current value of the largest number is greater than the current element of the array. if that is the case, the value keeps getting updated and the final value of largestnum is printed."/>
+            <declare name="largestElement" type="Integer" array="True" size="5"/>
+            <declare name="largestnum, input1, input" type="Integer" array="False" size=""/>
+            <assign variable="largestnum" expression="0"/>
+            <for variable="input" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;give the input for &quot;&amp;input+1&amp;&quot; element&quot;" newline="True"/>
+                <input variable="largestElement[input]"/>
+            </for>
+            <for variable="input1" start="0" end="4" direction="inc" step="1">
+                <if expression="largestElement[input1]&gt;largestnum">
+                    <then>
+                        <assign variable="largestnum" expression="largestElement[input1]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Largest number is &quot;&amp;largestnum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
