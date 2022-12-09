@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:10:52 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTItMDk7MDk6MTg6MDggQU07Mjg1OQ=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTItMDk7MTE6MTA6NTIgQU07MjsyOTUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program takes the input for all ten elements in the array. storeVal is the array which stores all the input elements. These elements are then printed again using anotehr loop."/>
+            <declare name="loops" type="Integer" array="False" size=""/>
+            <declare name="storeVal" type="Integer" array="True" size="10"/>
+            <for variable="loops" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Please enter the value of the &quot;&amp;loops&amp;&quot; cell of the array&quot;" newline="True"/>
+                <input variable="storeVal[loops]"/>
+            </for>
+            <assign variable="loops" expression="0"/>
+            <for variable="loops" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;The value of the&quot;&amp;loops&amp;&quot; cell of the array is&quot;" newline="True"/>
+                <output expression="storeVal[loops]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

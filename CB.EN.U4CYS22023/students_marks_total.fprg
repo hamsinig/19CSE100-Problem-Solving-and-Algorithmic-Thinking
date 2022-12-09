@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:11:39 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTItMDk7MDk6MTg6MDggQU07Mjg1OQ=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjItMTItMDk7MTE6MTE6MzkgQU07NDsyOTYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="inputVal takes the input from the user regarding the number of students.inputVal1 iterates for taking the input for each student.Val1 iterates the input for each of the 5 subjects.Output1 iterates to print the data of each student. Output2 iterates to print the marks of each subject. marksofSubs array is an array inside the array called marks- holds the value of marks fo all 5 subjects of one student.  Average is an array that stores the average of the marks of all students. Total is an array that stores the total marks of all students. Rollno is an array that stores the roll number of all students."/>
+            <declare name="inputVal" type="Integer" array="False" size=""/>
+            <declare name="output1, output2, inputVal1, val1" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of students:&quot;" newline="True"/>
+            <input variable="inputVal"/>
+            <declare name="loop" type="Integer" array="False" size=""/>
+            <declare name="rollno" type="Integer" array="True" size="inputVal"/>
+            <declare name="marks" type="Integer" array="True" size="inputVal"/>
+            <declare name="total" type="Integer" array="True" size="inputVal"/>
+            <declare name="average" type="Integer" array="True" size="inputVal"/>
+            <declare name="marksofSubs" type="Integer" array="True" size="5"/>
+            <for variable="inputVal1" start="0" end="inputVal-1" direction="inc" step="1">
+                <output expression="&quot;Give the input for roll no of &quot;&amp;inputVal1+1&amp;&quot; student&quot;" newline="True"/>
+                <input variable="rollno[inputVal1]"/>
+                <assign variable="total[inputVal1]" expression="0"/>
+                <for variable="val1" start="0" end="4" direction="inc" step="1">
+                    <output expression="&quot;Give the input for marks of &quot;&amp;val1+1&amp;&quot; subject&quot;" newline="True"/>
+                    <input variable="marksofSubs[val1]"/>
+                    <assign variable="marks[inputVal1]" expression="marksofSubs[val1]"/>
+                    <assign variable="total[inputVal1]" expression="marksofSubs[val1]+total[inputVal1]"/>
+                </for>
+                <assign variable="average[inputVal1]" expression="total[inputVal1]/5"/>
+            </for>
+            <for variable="output1" start="0" end="inputVal-1" direction="inc" step="1">
+                <output expression="&quot;The data of the &quot;&amp;output1+1&amp;&quot; student is&quot;" newline="True"/>
+                <output expression="&quot;Roll number:&quot;&amp;rollno[output1]" newline="True"/>
+                <output expression="&quot;Marks:&quot;" newline="True"/>
+                <for variable="output2" start="0" end="4" direction="inc" step="1">
+                    <output expression="&quot;Subject&quot;&amp;output2+1&amp;&quot;: &quot;&amp;marksofSubs[output2]" newline="True"/>
+                </for>
+                <output expression="&quot;Total: &quot;&amp;total[output1]" newline="True"/>
+                <output expression="&quot;Average: &quot;&amp;average[output1]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
