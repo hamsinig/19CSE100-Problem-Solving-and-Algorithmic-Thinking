@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Harini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 11:06:54 PM"/>
+        <attribute name="created" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMy0wMS0yNzswNzoyMjoxNSBQTTsyNjI5"/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMy0wMS0yNzswNzoyNDoyOSBQTTszO0NCLkVOLlU0Q1lTMjIwMTI7MjAyMjIzTUFZQzAwNDk7MjAyMi0xMi0wMjswOTo1OTozNyBBTTtmaWJvbmFjY2kuZnByZzs3MzM3"/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMy0wMS0yNzswNzoyNjowMiBQTTsxOzI3Mzc="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjMtMDEtMjc7MTE6MDY6NTQgUE07MTsyOTcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="count1" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the count of numbers till you want&quot;" newline="True"/>
+            <input variable="count1"/>
+            <call expression="fibbonacci(count)"/>
+        </body>
+    </function>
+    <function name="fibbonacci" type="Integer" variable="num1">
+        <parameters>
+            <parameter name="count" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fibbo, num1, num2" type="Integer" array="False" size=""/>
+            <assign variable="num1" expression="0"/>
+            <assign variable="num2" expression="1"/>
+            <while expression="count1&gt;0">
+                <output expression="num1" newline="True"/>
+                <assign variable="num2" expression="num1+num2"/>
+                <assign variable="num1" expression="num2-num1"/>
+                <assign variable="count1" expression="count1-1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

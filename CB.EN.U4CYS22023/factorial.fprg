@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Harini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 11:13:54 PM"/>
+        <attribute name="created" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMy0wMS0yNzswNzoxNzo0MyBQTTsyNjM0"/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMy0wMS0yNzswNzoxOToxMiBQTTs0O0hhcmluaTtCVUNFUEhBTFVTOzIwMjMtMDEtMjc7MDc6MTM6MjggUE07cmVjdXJzaW9uX2FkZGl0aW9uLmZwcmc7Nzg5Ng=="/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMy0wMS0yNzswNzoyMDo0NCBQTTsxOzI3Mzc="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjMtMDEtMjc7MTE6MTM6NTQgUE07MTsyOTcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number that you want the factorial of&quot;" newline="True"/>
+            <input variable="num"/>
+            <call expression="while(num)"/>
+        </body>
+    </function>
+    <function name="facto" type="Integer" variable="fact">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fact, i" type="Integer" array="False" size=""/>
+            <assign variable="fact" expression="1"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i&lt;=num">
+                <assign variable="fact" expression="fact*i"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="fact" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

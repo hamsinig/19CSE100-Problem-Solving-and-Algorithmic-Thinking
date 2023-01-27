@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:50:20 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjMtMDEtMTk7MDk6NTQ6MTEgQU07Mjg1Mw=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjMtMDEtMjA7MTA6NTA6MjAgQU07MzsyOTQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="count, min, count1, a, y, count2" type="Integer" array="False" size=""/>
+            <declare name="inputarray" type="Integer" array="True" size="5"/>
+            <for variable="count" start="0" end="4" direction="inc" step="1">
+                <input variable="inputarray[count]"/>
+            </for>
+            <for variable="count" start="0" end="3" direction="inc" step="1">
+                <assign variable="min" expression="inputarray[count]"/>
+                <for variable="count1" start="count" end="4" direction="inc" step="1">
+                    <if expression="min&gt;inputarray[count1]">
+                        <then>
+                            <assign variable="min" expression="inputarray[count1]"/>
+                            <assign variable="y" expression="count1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <assign variable="inputarray[y]" expression="inputarray[count]"/>
+                <assign variable="inputarray[count]" expression="min"/>
+            </for>
+            <for variable="count" start="0" end="4" direction="inc" step="1">
+                <output expression="inputarray[count]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hamsi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 11:06:37 AM"/>
+        <attribute name="created" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjMtMDEtMjA7MDk6MDk6MzMgQU07Mjg0OQ=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjMtMDEtMjA7MTE6MDE6MTIgQU07MTtoYW1zaTtERVNLVE9QLTBKTUZRSTI7MjAyMy0wMS0yMDswOTozOTo1NSBBTTtzZWxlY3NvcnQyLmZwcmc7NzQyMA=="/>
+        <attribute name="edited" value="aGFtc2k7REVTS1RPUC0wSk1GUUkyOzIwMjMtMDEtMjA7MTE6MDY6MzcgQU07MzsyOTUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="inputarr" type="Integer" array="True" size="5"/>
+            <declare name="count, count1, a" type="Integer" array="False" size=""/>
+            <for variable="count" start="0" end="4" direction="inc" step="1">
+                <input variable="inputarr[count]"/>
+            </for>
+            <for variable="count" start="0" end="4" direction="inc" step="1">
+                <for variable="count1" start="0" end="3" direction="inc" step="1">
+                    <if expression="inputarr[count1]&gt;inputarr[count1+1]">
+                        <then>
+                            <assign variable="a" expression="inputarr[count1]"/>
+                            <assign variable="inputarr[count1]" expression="inputarr[count1+1]"/>
+                            <assign variable="inputarr[count1+1]" expression="a"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="count" start="0" end="4" direction="inc" step="1">
+                <output expression="inputarr[count]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
